@@ -28,3 +28,29 @@
 - 多字体 fallback
 - 网络字体、自定义字体
 - iconfont
+
+## 行高
+
+- 行高的构成
+
+行高由 line-box 组成，line-box 由 inline-box 组成
+
+inline-box 的高度会决定行高
+
+inline 使用 line-height 在 div 中是**垂直居中**的
+
+- 图片缝隙问题
+
+```css
+{
+    display: block;
+}
+
+// 不以为 base line 对齐
+{
+    vertical-align: bottom;
+}
+```
+
+
+
