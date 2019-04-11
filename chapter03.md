@@ -36,6 +36,7 @@
 - 脱离文档流
 - 但不脱离文本流
 - 常用于图文混排
+- **清除浮动**
 - 对自身的影响：
   - 形成“块”（BFC）
   - 位置尽量靠上
@@ -48,3 +49,64 @@
 - 对父级元素的影响
   - 从布局上“消失”
   - 高度塌陷
+
+## inline-block
+
+- 像文本一样排 block 元素
+- 没有清除浮动等问题
+- 需要处理间隙（font-sizes）
+
+## 响应式设计和布局
+
+- 在不同设备上正常使用
+- 一般主要处理屏幕大小问题
+- 主要方法：
+  - 隐藏 + 折行 + 自适应空间
+  - rem/viewport/media query
+  
+    media max-width 大的写在前面 反过来的话 小屏幕的样式会被覆盖
+    ```css
+     @media (max-width: 375px) {
+            html {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            html {
+                font-size: 20px;
+            }
+        }
+    ```
+
+## CSS 面试真题
+
+### 实现两栏（三拦）布局的方法
+
+- 表格布局
+- float + margin 布局
+- inline-block 布局
+- flexbox 布局
+
+### position:absolute/fixed 有什么区别
+
+- 前者相对最近的 absolute/relative
+- 后者相对屏幕（viewport）
+
+### display:inline-block 的间隙
+
+- 原因：空白字符造成字符间距
+- 解决：消灭字符(删除空白或者直接注释)或者消灭字距(font-size)
+
+### 为什么需要清除浮动 如何清除浮动
+
+- 防止高度塌陷，不影响其他元素
+- 让盒子负责自己的布局
+- overflow:hidden(auto)
+- ::after{clear:both}
+
+### 如何适配移动端页面
+
+- viewport
+- rem/viewport/media query
+- 设计上：隐藏 折行 自适应
