@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flexbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+        .box {
+            border: 1px solid red;
+            display: flex;
+            width: 800px;
+            height: 200px;
+        }
+
+        .left {
+            background: yellow;
+            width: 200px;
+            margin: 5px;
+        }
+
+        .right {
+            background: green;
+            flex: 1;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="left">
+            左
+        </div>
+        <div class="right">
+            右
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>display</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        div {
+            background: red;
+            width: 100px;
+            height: 100px;
+        }
+
+        .p1 {
+            position: static;
+        }
+
+        .p2 {
+            position: relative;
+            background: blue;
+            left: 10px;
+            top: -10px;
+        }
+
+        .p3 {
+            position: absolute;
+            left: 200px;
+            top: 30px;
+        }
+
+        .p4 {
+            position: fixed;
+            left: 0;
+            bottom: 10px;
+        }
+
+        .p3-3 {
+            background: yellow;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="p1">
+        static
+    </div>
+    <div class="p2">
+        relative
+        <div class="p3-3">
+            xzx
+        </div>
+    </div>
+    <div class="p3">
+        <!-- absolute 脱离文档流 相对于最近的**父级** relative 或者 absolute 不会对其他元素造成影响-->
+        absolute
+        <div class="p3-3">
+            panda
+        </div>
+    </div>
+    <div class="p4">
+        <!-- 相对于屏幕 -->
+        fixed
+    </div>
+    <div class="p5">
+        p5
+    </div>
+</body>
+
+</html>

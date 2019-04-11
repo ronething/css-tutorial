@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        table {
+            width: 800px;
+            height: 200px;
+            border-collapse: collapse;
+            /*边框会合并为一个单一的边框。 */
+        }
+
+        .left {
+            background: red;
+        }
+
+        .right {
+            background: blue;
+        }
+
+        .tab {
+            margin-top: 20px;
+            display: table;
+            width: 800px;
+            height: 200px;
+        }
+
+        .table_row {
+            display: table-row;
+        }
+
+        .table_cell {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td class="left">
+                左
+            </td>
+            <td class="right">
+                右
+            </td>
+        </tr>
+    </table>
+    <div class="tab">
+        <div class="table_row">
+            <div class="left table_cell">
+                左
+            </div>
+            <div class="right table_cell">
+                右
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
