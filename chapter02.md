@@ -113,7 +113,7 @@ inline 使用 line-height 在 div 中是**垂直居中**的
   - 伪元素是真的有元素
   - 前者单冒号，后者双冒号。
 
-- 如何没话 checkbox
+- 如何美化 checkbox
   - label[for] 和 id
   - 隐藏原生 input
   - :checked + label
