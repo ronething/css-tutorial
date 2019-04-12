@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>keyframes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container {
+            width: 100px;
+            height: 100px;
+            background: red;
+            animation: run 1s linear;
+            /* animation: run2 2s; */
+            /* animation-direction: reverse; */
+            /* animation-iteration-count: 3; */
+            /* animation-iteration-count: infinite; */
+            /* forwards 动画会停在 100% 结束处 */
+            /* animation-fill-mode: forwards; */
+            /* animation-fill-mode: backwards; */
+            
+        }
+
+        .container:hover {
+            animation-play-state: paused;
+        }
+
+
+        @keyframes run {
+            0% {
+                width: 100px;
+            }
+            
+            100% {
+                width: 800px;
+            }
+        }
+        @keyframes run2{
+            0% {
+                width: 100px;
+            }
+            
+            50%{
+                width: 800px;
+            }
+            100% {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+</body>
+
+</html>
