@@ -1,0 +1,11 @@
+.container .nav {
+  font-size: 12px;
+}
+
+.container .content {
+  font-size: 14px;
+}
+
+.container .content:hover {
+  background: red;
+}

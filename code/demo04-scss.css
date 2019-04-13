@@ -1,0 +1,13 @@
+.block,
+.container .nav,
+.container .content {
+  font-size: 12px;
+}
+
+.container .nav {
+  background: green;
+}
+
+.container .content:hover {
+  background: red;
+}

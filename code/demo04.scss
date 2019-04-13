@@ -1,0 +1,20 @@
+$fontSize: 12px;
+
+.block {
+    font-size: $fontSize;
+}
+
+.container {
+    .nav {
+        @extend .block;
+        background: green;
+    }
+
+    .content {
+        @extend .block;
+
+        &:hover {
+            background: red;
+        }
+    }
+}
